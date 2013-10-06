@@ -1,0 +1,33 @@
+.bold{font-weight:bold;}
+
+a{color:#a80000; text-decoration:  none;}
+a:hover{text-decoration:underline;}
+a.nll{text-decoration:none;color:#000000;}
+a.nll:hover{text-decoration:none;color:#ef4850;}
+
+.full_width{width:100%;}
+
+.block{display:block}
+.inline{display:inline}
+/*.spacer{background:url('/images/Layout/spacer.gif') 0 0 repeat-x transparent;}*/
+.cusor_hand{cursor:hand;cursor:pointer;}
+
+.ha_center{text-align:center;}
+.ha_left{text-align:left;}
+.ha_right{text-align:right;}
+.va_bottom{vertical-align:bottom;}
+.va_middle{vertical-align:middle;}
+.va_top{vertical-align:top;}
+
+.fl_left{float:left;}
+.fl_right{float:right;}
+
+.cl_left{clear:left;}
+.cl_right{clear:right;}
+.cl_both{clear:both;}
+
+.tb{display:table;}
+.tb_row{display:table-row;}
+.tb_cell{display:table-cell;padding:2px;}
+
+.word_break{word-break: break-all;word-wrap: break-word;}
