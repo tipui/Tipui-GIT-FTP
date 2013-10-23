@@ -247,16 +247,22 @@ class FTP
 			* Important to avoid bypass the function is_file() bellow.
 			* The problem is, when the file not exists locally, the method MakeDirRecursively() will creates like a folder.
 			*/
+			$local_path_not_found_bypass = false;
 			if( !file_exists( $local_path ) )
 			{
-				$error[$k] = array( $v[0], $v[1], 'local path not found' );
-				continue;
+				if( $v[0] == self::DELETED )
+				{
+					$local_path_not_found_bypass = ( substr( $v[1], -4, 1 ) == '.' ) ? 'file' : 'folder';
+				}else{
+					$error[$k] = array( $v[0], $v[1], 'local path not found' );
+					continue;
+				}
 			}
 
 			/**
 			* Important, must check if file exists. The script above do.
 			*/
-			if( is_file( $local_path ) )
+			if( is_file( $local_path ) or $local_path_not_found_bypass == 'file' )
 			{
 				$subpath = dirname( $subpath );
 

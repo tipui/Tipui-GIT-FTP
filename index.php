@@ -22,7 +22,7 @@ date_default_timezone_set('Asia/Tokyo');
 * Avoid long executions.
 * Define the limit as your needs
 */
-set_time_limit(15);
+set_time_limit(0);
 
 /**
 * General constants
@@ -47,7 +47,6 @@ header( 'Content-Type: text/html; charset=' . CHARSET );
 * Load settings file
 */
 require_once BASE_DIR . 'settings.php';
-
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
